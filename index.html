@@ -14,6 +14,9 @@
         .replace(/[áéóú]/g, 'í')
         .replace(/[AEOU]/g, 'I')
         .replace(/[aeou]/g, 'i');
+
+      $textarea.focus();
+      $textarea.setSelectionRange(0, $textarea.value.length);
     }
   </script>
 
