@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>i</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script type="text/javascript">
+    function convert() {
+      var $textarea = document.getElementById('textarea');
+
+      $textarea.value = $textarea.value
+        .replace(/[ÁÉÓÚ]/g, 'Í')
+        .replace(/[áéóú]/g, 'í')
+        .replace(/[AEOU]/g, 'I')
+        .replace(/[aeou]/g, 'i');
+    }
+  </script>
+
+  <style type="text/css">
+    textarea {
+      width: 100%;
+      max-width: 480px;
+      height: 160px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="convert(); return false;">
+    <h1>Cinvirtidir</h1>
+
+    <textarea id="textarea"></textarea>
+
+    <div>
+      <button type="submit">Cinvirtir</button>
+    </div>
+  </form>
+</body>
+</html>
