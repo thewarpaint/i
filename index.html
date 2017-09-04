@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <script type="text/javascript">
-    function convert() {
+    function convertVowelsToI() {
       var $textarea = document.getElementById('textarea');
 
       $textarea.value = $textarea.value
@@ -35,13 +35,13 @@
   </style>
 </head>
 <body>
-  <form onsubmit="convert(); return false;">
-    <h1>Cinvirtidir</h1>
+  <form>
+    <h1>Convertidor</h1>
 
     <textarea id="textarea"></textarea>
 
     <div>
-      <button type="submit">Cinvirtir</button>
+      <button type="button" onclick="convertVowelsToI()">Cinvirtir</button>
     </div>
   </form>
 </body>
