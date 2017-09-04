@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <script type="text/javascript">
-    function convertVowelsToI() {
-      var $textarea = document.getElementById('textarea');
+    var $textarea;
 
+    function init() {
+      $textarea = document.getElementById('textarea');
+    }
+
+    function convertVowelsToI() {
       $textarea.value = $textarea.value
         .replace(/[ÁÉÓÚ]/g, 'Í')
         .replace(/[áéóú]/g, 'í')
@@ -44,5 +48,10 @@
       <button type="button" onclick="convertVowelsToI()">Cinvirtir</button>
     </div>
   </form>
+
+  <script type="text/javascript">
+    // Rudimentary, cross-browser DOMContentLoaded ;)
+    init();
+  </script>
 </body>
 </html>
