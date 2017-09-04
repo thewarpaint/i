@@ -30,6 +30,11 @@
         .split('')
         .join(' ');
     }
+
+    function convertAddClapEmoji() {
+      $textarea.value = $textarea.value
+        .replace(/\s+/g, ' 👏 ');
+    }
   </script>
 
   <style type="text/css">
@@ -55,6 +60,7 @@
     <div>
       <button type="button" onclick="convertVowelsToI()">Cinvirtir</button>
       <button type="button" onclick="convertToUppercaseAndAddSpaces()">C O N V E R T I R</button>
+      <button type="button" onclick="convertAddClapEmoji()">Con 👏 ver 👏 tir</button>
     </div>
   </form>
 
