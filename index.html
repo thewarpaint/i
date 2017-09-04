@@ -19,8 +19,7 @@
         .replace(/[AEOU]/g, 'I')
         .replace(/[aeou]/g, 'i');
 
-      $textarea.focus();
-      $textarea.setSelectionRange(0, $textarea.value.length);
+      setFocusAndSelectTextareaContents();
     }
 
     function convertToUppercaseAndAddSpaces() {
@@ -29,11 +28,20 @@
         .replace(/\s+/g, '')
         .split('')
         .join(' ');
+
+      setFocusAndSelectTextareaContents();
     }
 
     function convertAddClapEmoji() {
       $textarea.value = $textarea.value
         .replace(/\s+/g, ' 👏 ');
+
+      setFocusAndSelectTextareaContents();
+    }
+
+    function setFocusAndSelectTextareaContents() {
+      $textarea.focus();
+      $textarea.setSelectionRange(0, $textarea.value.length);
     }
   </script>
 
