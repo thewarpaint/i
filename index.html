@@ -22,6 +22,14 @@
       $textarea.focus();
       $textarea.setSelectionRange(0, $textarea.value.length);
     }
+
+    function convertToUppercaseAndAddSpaces() {
+      $textarea.value = $textarea.value
+        .toUpperCase()
+        .replace(/\s+/g, '')
+        .split('')
+        .join(' ');
+    }
   </script>
 
   <style type="text/css">
@@ -46,6 +54,7 @@
 
     <div>
       <button type="button" onclick="convertVowelsToI()">Cinvirtir</button>
+      <button type="button" onclick="convertToUppercaseAndAddSpaces()">C O N V E R T I R</button>
     </div>
   </form>
 
