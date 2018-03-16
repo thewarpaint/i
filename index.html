@@ -37,6 +37,9 @@
         .replace(/[ÁÉÍÓÚAEIOU]/g, 'X')
         .replace(/[áéíóúaeiou]/g, 'x');
 
+      setFocusAndSelectTextareaContents();
+    }
+
     function convertAddClapEmoji() {
       $textarea.value = $textarea.value
         .replace(/\s+/g, ' 👏 ');
