@@ -32,6 +32,11 @@
       setFocusAndSelectTextareaContents();
     }
 
+    function convertVowelsToX() {
+      $textarea.value = $textarea.value
+        .replace(/[ÁÉÍÓÚAEIOU]/g, 'X')
+        .replace(/[áéíóúaeiou]/g, 'x');
+
     function convertAddClapEmoji() {
       $textarea.value = $textarea.value
         .replace(/\s+/g, ' 👏 ');
