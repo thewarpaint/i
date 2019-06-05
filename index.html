@@ -46,6 +46,19 @@
 
       setFocusAndSelectTextareaContents();
     }
+    
+    function convertToRandomCase() {
+      $textarea.value = $textarea.value
+        .split('')
+        .map(function (char) {
+          return Math.random() > .5
+            ? char.toLowerCase()
+            : char.toUpperCase();
+        })
+        .join('');
+
+      setFocusAndSelectTextareaContents();
+    }
 
     function setFocusAndSelectTextareaContents() {
       $textarea.focus();
@@ -78,6 +91,7 @@
       <button type="button" onclick="convertToUppercaseAndAddSpaces()">C O N V E R T I R</button>
       <button type="button" onclick="convertAddClapEmoji()">Con 👏 ver 👏 tir</button>
       <button type="button" onclick="convertVowelsToX()">Cxnvxrtxr</button>
+      <button type="button" onclick="convertToRandomCase()">CoNVerTiR</button>
     </div>
   </form>
 
